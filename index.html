@@ -1,16 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Smart Home</title>
 </head>
+
 <body class="bg-black">
-    <header>
-        <nav>
-            
+    <header style="z-index: 999;" class="fixed w-full flex justify-center z-[999]" id="nav">
+        <nav
+            class="bg-[#1E5AFA] backdrop-blur-md border border-white/20 flex justify-between w-full max-w-[1440px] py-5 items-center text-white px-10">
+            <div id="menu-overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+            <ul class="gap-6 hidden md:flex">
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#Features">
+                        Features
+                    </a>
+                </li>
+                <li>
+                    <a href="#Testimonials">
+                        Testimonials
+                    </a>
+                </li>
+            </ul>
+            <img class="w-fit h-fit" src="/assets/Logo.svg" />
+            <button class="md:block bg-white text-black rounded-sm hidden px-9 py-4">
+                Download App
+            </button>
+            <div id="hamburger" class="flex flex-col md:hidden cursor-pointer justify-between w-[40px] h-[40px] gap-1">
+                <div class="flex-1 bg-white"></div>
+                <div class="flex-1 bg-white"></div>
+                <div class="flex-1 bg-white"></div>
+            </div>
         </nav>
+        <div id="mobile-menu"
+            class="fixed h-full w-full bg-[#1E5AFA] transform -translate-x-full transition-transform duration-300 ease-in-out z-50 p-10 flex flex-col gap-8">
+            <button id="close-menu" class="text-white text-right text-4xl">
+                X
+            </button>
+            <div class="flex flex-col justify-center h-100 gap-6">
+                <ul class="flex flex-col gap-6 text-white text-3xl items-center">
+                    <li">
+                        <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#Features">Features</a>
+                        </li>
+                        <li>
+                            <a href="#Testimonials">Testimonials</a>
+                        </li>
+                </ul>
+                <button class="bg-white text-black rounded-md px-9 py-4">
+                    Download App
+                </button>
+            </div>
+        </div>
+        <div class="fixed inset-0 bg-black/50 hidden z-40" id="menu-overlay"></div>
     </header>
+    <section id="home" class="flex flex-col justify-start items-center h-screen gap-5 py-20 bg-[#1E5AFA] pt-40">
+        <h1 class="text-7x1 md:text-6x1 text-white font-bold text-center">
+            Take Full Control <br /> of Your Home
+        </h1>
+        <p class="text-xs md:text-lg text-white text-center">
+            Manage your appliances, monitor energy, and create a safer, smarter living space. <br />
+            All from your phone.
+        </p>
+        <img src="/assets/Hero Image.png" class="w-full absolute right-[50%] top-[80%] md:top-[50%] translate-x-[50%]">
+        <div class="flex justify-start h-full items-end w-full">
+            <div class="flex flex-col px-3 md:gap-10 gap-4 w-8 md:w-10">
+                <img src="/assets/facebook.png">
+                <img src="/assets/ig.png">
+                <img src="/assets/twit.png">
+                <img src="/assets/ink.png">
+            </div>
+        </div>
+    </section>
 </body>
+<script src="/script.js"></script>
+
 </html>
