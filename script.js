@@ -19,7 +19,7 @@ closeMenu.addEventListener('click', hideMenu);
 overlay.addEventListener('click', hideMenu);
 
 function togglefaq(element) {
-    const allItems = document.querySelectorAll('.faq-item');
+    const allItems = document.querySelectorAll('.faq-items');
     const content = element.querySelector('.faq-content');
     const img = element.querySelector('img');
     const openIcon = '/assets/open.png';
